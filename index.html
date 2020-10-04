@@ -1,0 +1,12 @@
+---
+layout: page
+permalink: /
+layout: home
+---
+
+<span>Tracks:</span>
+<ul>
+  {% for commannd in site.data.commands %}
+    <li>Title: {{ track.name }}</li>
+  {% endfor %}    
+</ul>

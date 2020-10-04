@@ -1,0 +1,3635 @@
+[
+  {
+    "name": "help",
+    "qualified_name": "help",
+    "description": "Displays command help.",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "command",
+          "type": "System.String",
+          "description": "Command to provide help for.",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "avatar",
+    "qualified_name": "avatar",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordUser",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "about",
+    "qualified_name": "about",
+    "description": "Shows information about the bot",
+    "hidden": false,
+    "aliases": [
+      "bot-info",
+      "info"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "userinfo",
+    "qualified_name": "userinfo",
+    "description": "Checks you or specified users info",
+    "hidden": false,
+    "aliases": [
+      "user-info"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "user",
+          "type": "DSharpPlus.Entities.DiscordUser",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "ping",
+    "qualified_name": "ping",
+    "description": "Bot ping",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "counting",
+    "qualified_name": "counting",
+    "hidden": false,
+    "aliases": [
+      "count"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "toggle",
+        "qualified_name": "counting toggle",
+        "description": "Toggles counting",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "punishdummies",
+        "qualified_name": "counting punishdummies",
+        "description": "Used for punishing people who count wrong >:)",
+        "hidden": false,
+        "aliases": [
+          "punish-dummies"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      }
+    ],
+    "arguments": {
+      "0": [
+        {
+          "name": "channel",
+          "type": "DSharpPlus.Entities.DiscordChannel",
+          "description": "The channel you want to use for counting",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "drop",
+    "qualified_name": "drop",
+    "description": "The module for xp/money drops",
+    "hidden": false,
+    "aliases": [
+      "d",
+      "drops"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "toggle",
+        "qualified_name": "drop toggle",
+        "description": "Toggles xp drops",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "staytime",
+        "qualified_name": "drop staytime",
+        "description": "Gets or sets the current stay time for drops",
+        "hidden": false,
+        "aliases": [
+          "stay-time"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "stayTime",
+              "type": "System.Int32",
+              "description": "The new stay time you want (in seconds)",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "chance",
+        "qualified_name": "drop chance",
+        "description": "Gets or sets the current drop chance",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "chance",
+              "type": "System.Double",
+              "description": "The new drop chance you want",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "maxxpreward",
+        "qualified_name": "drop maxxpreward",
+        "description": "Gets or sets the current max xp reward",
+        "hidden": false,
+        "aliases": [
+          "max-xp-rewards"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "maxXp",
+              "type": "System.Double",
+              "description": "The new max xp reward you want",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "message",
+        "qualified_name": "drop message",
+        "description": "Gets or sets the drop message",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "message",
+              "type": "System.String",
+              "description": "The new message you want to set",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {
+      "0": [
+        {
+          "name": "xp",
+          "type": "System.Double",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "inventory",
+    "qualified_name": "inventory",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "gains",
+    "qualified_name": "gains",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "losses",
+    "qualified_name": "losses",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "buy",
+    "qualified_name": "buy",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "id",
+          "type": "System.String",
+          "description": "The name or id of the product",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "sell",
+    "qualified_name": "sell",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "id",
+          "type": "System.String",
+          "description": "The name or id of the product",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "balance",
+    "qualified_name": "balance",
+    "description": "Checks your current balance",
+    "hidden": false,
+    "aliases": [
+      "bal"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "transfer",
+    "qualified_name": "transfer",
+    "description": "send some funds to another user",
+    "hidden": false,
+    "aliases": [
+      "pay"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "amount",
+          "type": "System.Double",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "daily",
+    "qualified_name": "daily",
+    "description": "Claims your daily funds",
+    "hidden": true,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "shop",
+    "qualified_name": "shop",
+    "description": "Commands for shop",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [
+      {
+        "name": "build",
+        "qualified_name": "shop build",
+        "description": "Makes a new shop",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "import",
+        "qualified_name": "shop import",
+        "description": "Imports saved shop creation made from the website",
+        "hidden": true,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "id",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "item",
+        "qualified_name": "shop item",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [
+          {
+            "name": "addwithjson",
+            "qualified_name": "shop item addwithjson",
+            "description": "Adds a item to specified shop using a json object",
+            "hidden": false,
+            "aliases": [
+              "create-with-json"
+            ],
+            "checks": [],
+            "children": [],
+            "arguments": {
+              "0": [
+                {
+                  "name": "shopName",
+                  "type": "System.String",
+                  "optional": false,
+                  "catch_all": false
+                },
+                {
+                  "name": "query",
+                  "type": "System.String",
+                  "optional": false,
+                  "catch_all": true
+                }
+              ]
+            }
+          },
+          {
+            "name": "build",
+            "qualified_name": "shop item build",
+            "description": "Builds and adds a item to specified shop",
+            "hidden": false,
+            "aliases": [],
+            "checks": [],
+            "children": [],
+            "arguments": {
+              "0": [
+                {
+                  "name": "shopName",
+                  "type": "System.String",
+                  "optional": false,
+                  "catch_all": true
+                }
+              ]
+            }
+          }
+        ],
+        "arguments": {}
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "embed",
+    "qualified_name": "embed",
+    "description": "The module for creating embeds",
+    "hidden": false,
+    "aliases": [
+      "em"
+    ],
+    "checks": [],
+    "children": [
+      {
+        "name": "create",
+        "qualified_name": "embed create",
+        "description": "Creates a custom embed",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "title",
+              "type": "System.String",
+              "description": "The title of the embed. (Must be encased between quotes if you want to use a title that has spaces. To set a custom color for the embed add the hex code of the color at the end of the title. e.g `Title Here:#FFF`)",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "content",
+              "type": "System.String",
+              "description": "The content you want the embed to have. (Can only be 2048 characters long)",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "build",
+        "qualified_name": "embed build",
+        "hidden": true,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "title",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "remind",
+    "qualified_name": "remind",
+    "hidden": false,
+    "aliases": [
+      "remind-me",
+      "remindme"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage messages"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "query",
+          "type": "System.String",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "kiss",
+    "qualified_name": "kiss",
+    "description": "Kiss people",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "slap",
+    "qualified_name": "slap",
+    "description": "Slap people",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "hug",
+    "qualified_name": "hug",
+    "description": "Hug people",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "cuddle",
+    "qualified_name": "cuddle",
+    "description": "Cuddle people",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "tickle",
+    "qualified_name": "tickle",
+    "description": "Tickle people",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "pat",
+    "qualified_name": "pat",
+    "description": "Pat people",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "feed",
+    "qualified_name": "feed",
+    "description": "Feed people",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "block",
+    "qualified_name": "block",
+    "description": ":eyes:",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "demote",
+    "qualified_name": "demote",
+    "description": "Demote :rage:",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "reacts",
+    "qualified_name": "reacts",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [
+      {
+        "name": "addkeyword",
+        "qualified_name": "reacts addkeyword",
+        "description": "Adds keywords for the bot to check and respond with specified response",
+        "hidden": false,
+        "aliases": [
+          "add-keyword"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "word",
+              "type": "System.String",
+              "description": "The word you want the bot to keep a lookout for",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "emote",
+              "type": "DSharpPlus.Entities.DiscordEmoji",
+              "description": "The emote you want the bot to react with",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "response",
+              "type": "System.String",
+              "description": "The response you want the bot to say when he finds that keyword",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "removekeyword",
+        "qualified_name": "reacts removekeyword",
+        "description": "Removes keywords for the bot to check and respond with specified response",
+        "hidden": false,
+        "aliases": [
+          "remove-keyword"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "keyword",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "setuproles",
+        "qualified_name": "reacts setuproles",
+        "description": "Sets up react roles (Must be executed in the channel with the messages)",
+        "hidden": false,
+        "aliases": [
+          "setup-roles"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "2": [
+            {
+              "name": "separators",
+              "type": "System.String",
+              "description": "Custom separators you want to use (can be emotes)",
+              "optional": false,
+              "catch_all": true
+            }
+          ],
+          "1": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel to read through",
+              "optional": true,
+              "catch_all": false
+            }
+          ],
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel to read through",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "separators",
+              "type": "System.String",
+              "description": "Custom separators you want to use (can be emotes)",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "buildroles",
+        "qualified_name": "reacts buildroles",
+        "description": "Does a interactive builder for react roles and allows you to specify a channel to add the menu to",
+        "hidden": false,
+        "aliases": [
+          "build-roles"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "1": [
+            {
+              "name": "separator",
+              "type": "System.String",
+              "description": "The character you want to split the role and emoji",
+              "optional": true,
+              "catch_all": false
+            },
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "description": "The name you of the group you want the roles to be put into",
+              "optional": true,
+              "catch_all": false
+            },
+            {
+              "name": "onlyOne",
+              "type": "System.Boolean",
+              "description": "If you want users to only have 1 role from this group",
+              "optional": true,
+              "catch_all": false
+            }
+          ],
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to build the reacts roles to",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "separator",
+              "type": "System.String",
+              "description": "The character you want to split the role and emoji",
+              "optional": true,
+              "catch_all": false
+            },
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "description": "The name you of the group you want the roles to be put into",
+              "optional": true,
+              "catch_all": false
+            },
+            {
+              "name": "onlyOne",
+              "type": "System.Boolean",
+              "description": "If you want users to only have 1 role from this group",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "redeem",
+        "qualified_name": "reacts redeem",
+        "description": "Redeems a ping react (if you have any)",
+        "hidden": true,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "clearroles",
+        "qualified_name": "reacts clearroles",
+        "description": "Clears all react roles from guilds data",
+        "hidden": false,
+        "aliases": [
+          "clear-roles"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "add",
+        "qualified_name": "reacts add",
+        "description": "Adds mention reacts to specified member",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "description": "The member you want to give the reacts to",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "emotes",
+              "type": "DSharpPlus.Entities.DiscordEmoji",
+              "description": "The emotes you want to give (must be in the server with the emotes)",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "check",
+        "qualified_name": "reacts check",
+        "description": "Checks the list of reacts from yourself and or specified member",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage emoji"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "remove",
+        "qualified_name": "reacts remove",
+        "description": "Removes mention reacts from specified member",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage emoji"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "description": "The member you want to remove the reacts from",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "emotes",
+              "type": "DSharpPlus.Entities.DiscordEmoji",
+              "description": "The emotes you want to remove",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "clear",
+        "qualified_name": "reacts clear",
+        "description": "Clears mention reacts from specified member",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage emoji"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "description": "The member you want to clear reacts from",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "level",
+    "qualified_name": "level",
+    "description": "Shows your current level and how much xp you need to reach the next level",
+    "hidden": false,
+    "aliases": [
+      "lvl"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "leaderboards",
+    "qualified_name": "leaderboards",
+    "description": "The stats here update every 5 minutes",
+    "hidden": false,
+    "aliases": [
+      "lb",
+      "top"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "economy",
+    "qualified_name": "economy",
+    "description": "Economy module stuff",
+    "hidden": false,
+    "aliases": [
+      "eco"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "toggle",
+        "qualified_name": "economy toggle",
+        "description": "Toggles economy for the guild",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "symbol",
+        "qualified_name": "economy symbol",
+        "description": "Sets or gets the guilds economy symbol (e.x: $)",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "symbol",
+              "type": "System.Object",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "give",
+        "qualified_name": "economy give",
+        "description": "Gives the specified user the set amount you put up",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "amount",
+              "type": "System.Double",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "setbalance",
+        "qualified_name": "economy setbalance",
+        "description": "Sets the specified users balance to whatever you want.",
+        "hidden": false,
+        "aliases": [
+          "set-balance"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "amount",
+              "type": "System.Double",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "startingbalance",
+        "qualified_name": "economy startingbalance",
+        "description": "Sets the servers starting balance for all members",
+        "hidden": false,
+        "aliases": [
+          "starting-balance"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "amount",
+              "type": "System.Nullable`1[System.Double]",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "levels",
+    "qualified_name": "levels",
+    "description": "The module for managing levels",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "toggle",
+        "qualified_name": "levels toggle",
+        "description": "Toggle the levels module",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "levelup",
+        "qualified_name": "levels levelup",
+        "description": "Forces the specified member to levelup",
+        "hidden": false,
+        "aliases": [
+          "level-up"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "setxp",
+        "qualified_name": "levels setxp",
+        "description": "Sets the specified members xp",
+        "hidden": false,
+        "aliases": [
+          "set-xp"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "xp",
+              "type": "System.Double",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "cap",
+        "qualified_name": "levels cap",
+        "description": "Gets or sets the server level cap",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "levelCap",
+              "type": "System.Int32",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "toggleembed",
+        "qualified_name": "levels toggleembed",
+        "description": "Toggles how the level up message will look when sent",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "togglemessage",
+        "qualified_name": "levels togglemessage",
+        "description": "Toggles the level up message",
+        "hidden": false,
+        "aliases": [
+          "togglemsg",
+          "toggle-msg",
+          "toggle-message"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "message",
+        "qualified_name": "levels message",
+        "description": "Gets or set the level up message",
+        "hidden": false,
+        "aliases": [
+          "msg"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "message",
+              "type": "System.String",
+              "description": "The message you want to use. Avaliable placeholders: `{level}`, `{remainingXP}`, `{currentXP}`, `{user}`, `{mention}`",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "messagechannel",
+        "qualified_name": "levels messagechannel",
+        "description": "The channel you want to send level up messages to (will default to whatever channel the user is currently typing in)",
+        "hidden": false,
+        "aliases": [
+          "message-channel",
+          "msgchannel"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to use",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "levelupmessage",
+        "qualified_name": "levels levelupmessage",
+        "description": "Sends you a message on how the level up message will look like",
+        "hidden": false,
+        "aliases": [
+          "lvlmsg",
+          "level-up-message"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "xp-per-message",
+        "qualified_name": "levels xp-per-message",
+        "description": "Gets or set the amount of max xp a user earns from sending messages",
+        "hidden": false,
+        "aliases": [
+          "xpm"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "maxAmount",
+              "type": "System.Double",
+              "description": "The new xpm you want",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "addmilestone",
+        "qualified_name": "levels addmilestone",
+        "description": "Adds specific roles to be given at a certain level",
+        "hidden": false,
+        "aliases": [
+          "add-milestone"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "1": [
+            {
+              "name": "level",
+              "type": "System.Int32",
+              "description": "The level you want users to be to earn the role",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "role",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role you want to give",
+              "optional": false,
+              "catch_all": false
+            }
+          ],
+          "0": [
+            {
+              "name": "level",
+              "type": "System.Int32",
+              "description": "The level you want users to be to earn the role",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "roles",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The roles you want to give",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "moderation",
+    "qualified_name": "moderation",
+    "description": "The module for configuring moderation stuff",
+    "hidden": false,
+    "aliases": [
+      "mod"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "setupmuterole",
+        "qualified_name": "moderation setupmuterole",
+        "description": "Sets up the server mute role",
+        "hidden": false,
+        "aliases": [
+          "setup-mute-role"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "memberlogchannel",
+        "qualified_name": "moderation memberlogchannel",
+        "description": "Gets or sets the current member log channel",
+        "hidden": false,
+        "aliases": [
+          "member-log",
+          "member-log-channel"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to use",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "messagelogchannel",
+        "qualified_name": "moderation messagelogchannel",
+        "description": "Gets or sets the current message log channel",
+        "hidden": false,
+        "aliases": [
+          "message-log",
+          "message-log-channel"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to use",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "muterole",
+        "qualified_name": "moderation muterole",
+        "description": "Gets or sets the server mute role",
+        "hidden": false,
+        "aliases": [
+          "mute-role"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "muteRole",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role you want to use",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "toggle",
+        "qualified_name": "moderation toggle",
+        "description": "Toggles this module",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "modlogchannel",
+        "qualified_name": "moderation modlogchannel",
+        "description": "Gets or sets the modlog channel",
+        "hidden": false,
+        "aliases": [
+          "mod-log",
+          "mod-log-channel"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to use",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "toggleantiraid",
+        "qualified_name": "moderation toggleantiraid",
+        "description": "Toggles our anti raid feature",
+        "hidden": false,
+        "aliases": [
+          "toggle-anti-raid"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "checkemote",
+    "qualified_name": "checkemote",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Administrator"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "emoji",
+          "type": "System.String",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "membercountchannel",
+    "qualified_name": "membercountchannel",
+    "description": "Gets or sets a channel used for displaying member count",
+    "hidden": false,
+    "aliases": [
+      "member-count",
+      "member-count-channel"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "channel",
+          "type": "DSharpPlus.Entities.DiscordChannel",
+          "description": "The channel you want to use to display member count",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "setup",
+    "qualified_name": "setup",
+    "description": "Setup guild specific config",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "unbanall",
+    "qualified_name": "unbanall",
+    "description": "Unabns all users from the server",
+    "hidden": false,
+    "aliases": [
+      "unban-all"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Administrator"
+      }
+    ],
+    "children": [],
+    "arguments": {}
+  },
+  {
+    "name": "prefix",
+    "qualified_name": "prefix",
+    "description": "Changes or checks the bot current prefix",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "newPrefix",
+          "type": "System.String",
+          "description": "The new prefix you want to set",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "backup",
+    "qualified_name": "backup",
+    "description": "Backups everything on the server (including roles, channel, emotes and set messages",
+    "hidden": true,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Administrator"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "channelsToPersistMessage",
+          "type": "DSharpPlus.Entities.DiscordChannel",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "announcement",
+    "qualified_name": "announcement",
+    "description": "Used for making announcements easier for guilds!",
+    "hidden": false,
+    "aliases": [
+      "announce"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Use priority speaker"
+      }
+    ],
+    "children": [
+      {
+        "name": "role",
+        "qualified_name": "announcement role",
+        "description": "Gets or sets the announcement role.",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "role",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role you want to ping when making an announcement",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "channel",
+        "qualified_name": "announcement channel",
+        "description": "Gets or sets the announcement channel.",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {
+      "0": [
+        {
+          "name": "message",
+          "type": "System.String",
+          "description": "The message you want to send",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "group",
+    "qualified_name": "group",
+    "description": "Commands to edit permission groups",
+    "hidden": false,
+    "aliases": [
+      "g",
+      "gr",
+      "groups"
+    ],
+    "checks": [],
+    "children": [
+      {
+        "name": "list",
+        "qualified_name": "group list",
+        "description": "Lists out all created groups",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "showUsers",
+              "type": "System.Boolean",
+              "description": "Shows users who are in the group",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "setrole",
+        "qualified_name": "group setrole",
+        "description": "Sets created role for specified group",
+        "hidden": false,
+        "aliases": [
+          "set-role"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "description": "The group you want to assign a role to",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "role",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role you want to assign to the group",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "changename",
+        "qualified_name": "group changename",
+        "description": "Edit specified group name",
+        "hidden": false,
+        "aliases": [
+          "change-name"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "description": "The group you want to edit",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "newName",
+              "type": "System.String",
+              "description": "The new name you want for the group",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "whitelistrole",
+        "qualified_name": "group whitelistrole",
+        "description": "Whitelist role(s) to group for [addrole] command",
+        "hidden": false,
+        "aliases": [
+          "whitelist-role"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "1": [
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "role",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role(s) you want the group to be able to assign",
+              "optional": false,
+              "catch_all": false
+            }
+          ],
+          "0": [
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "description": "The group you want to whitelist roles to",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "roles",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role(s) you want the group to be able to assign",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "checkallowedroles",
+        "qualified_name": "group checkallowedroles",
+        "description": "Check what role(s) specified group can add to users",
+        "hidden": false,
+        "aliases": [
+          "check-roles",
+          "allowed-roles",
+          "allowedroles",
+          "checkroles"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "description": "The group you would like to check",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "create",
+        "qualified_name": "group create",
+        "description": "Create a new group if a role is not specified the bot will create a new role",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "groupName",
+              "type": "System.String",
+              "description": "The name you want to group to be called",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "role",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role you want to assign to this group",
+              "optional": true,
+              "catch_all": false
+            },
+            {
+              "name": "parent",
+              "type": "System.String",
+              "description": "The parent of the group",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "punishments",
+    "qualified_name": "punishments",
+    "description": "Shows a list of punishments from specified user",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "removepunishment",
+    "qualified_name": "removepunishment",
+    "description": "Remove specified punishment from user",
+    "hidden": false,
+    "aliases": [
+      "remove-punishment",
+      "rm-punishment"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "id",
+          "type": "System.Int32",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "strike",
+    "qualified_name": "strike",
+    "description": "Tries to strike specified user",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Kick members"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "reason",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "purge",
+    "qualified_name": "purge",
+    "description": "purge messages from whatever channel this command is executed in max limit (100) (can only delete messages that are less than 2 weeks old)",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage messages"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "amount",
+          "type": "System.Int32",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "kick",
+    "qualified_name": "kick",
+    "description": "Tries to kick specified member from the server",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Kick members"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "reason",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "ban",
+    "qualified_name": "ban",
+    "description": "Ban specified member from the server permanently",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Ban members"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "1": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "duration",
+          "type": "System.TimeSpan",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "reason",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ],
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "reason",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        },
+        {
+          "name": "user",
+          "type": "DSharpPlus.Entities.DiscordUser",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "reason",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "unmute",
+    "qualified_name": "unmute",
+    "description": "Tries to unmute specified member",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Mute voice chat members"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "mute",
+    "qualified_name": "mute",
+    "description": "Tries to mute specified user",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Mute voice chat members"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "1": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "duration",
+          "type": "System.TimeSpan",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "reason",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ],
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "reason",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "addrole",
+    "qualified_name": "addrole",
+    "description": "Tries to add a list of roles to specified user",
+    "hidden": false,
+    "aliases": [
+      "ar",
+      "add-role"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage roles"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "1": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "role",
+          "type": "DSharpPlus.Entities.DiscordRole",
+          "optional": false,
+          "catch_all": false
+        }
+      ],
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "roles",
+          "type": "DSharpPlus.Entities.DiscordRole",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "removerole",
+    "qualified_name": "removerole",
+    "description": "Removes a list of roles from specified user",
+    "hidden": false,
+    "aliases": [
+      "rr",
+      "remove-role"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage roles"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "1": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "role",
+          "type": "DSharpPlus.Entities.DiscordRole",
+          "optional": false,
+          "catch_all": false
+        }
+      ],
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "roles",
+          "type": "DSharpPlus.Entities.DiscordRole",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "ignore",
+    "qualified_name": "ignore",
+    "description": "Sets a channel to be ignored by me :(",
+    "hidden": false,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage channels"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "channel",
+          "type": "DSharpPlus.Entities.DiscordChannel",
+          "description": "The channel you want to use",
+          "optional": true,
+          "catch_all": false
+        },
+        {
+          "name": "remove",
+          "type": "System.Boolean",
+          "description": "Remove a channel from the list",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "imageonly",
+    "qualified_name": "imageonly",
+    "description": "Gets or sets the channel to be images only (will delete any non image messages)",
+    "hidden": false,
+    "aliases": [
+      "image-only"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage channels"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "channel",
+          "type": "DSharpPlus.Entities.DiscordChannel",
+          "description": "The channel you want to use",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "mediaonly",
+    "qualified_name": "mediaonly",
+    "description": "Gets or sets the channel to be media only (will delete any non media messages (anything that isn't a link or file))",
+    "hidden": false,
+    "aliases": [
+      "media-only"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage channels"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "channel",
+          "type": "DSharpPlus.Entities.DiscordChannel",
+          "description": "The channel you want to use",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "freechannel",
+    "qualified_name": "freechannel",
+    "description": "Removes channels that are tagged with *only from filter.",
+    "hidden": false,
+    "aliases": [
+      "free-channel"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage channels"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "channel",
+          "type": "DSharpPlus.Entities.DiscordChannel",
+          "optional": true,
+          "catch_all": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "massrole",
+    "qualified_name": "massrole",
+    "description": "Adds the specified role(s) to all users in the server.",
+    "hidden": false,
+    "aliases": [
+      "mass-role"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [],
+    "arguments": {
+      "0": [
+        {
+          "name": "roles",
+          "type": "DSharpPlus.Entities.DiscordRole",
+          "description": "The role(s) you want to add to users.",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "welcomer",
+    "qualified_name": "welcomer",
+    "description": "Welcomer stuff :v",
+    "hidden": false,
+    "aliases": [
+      "welc"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "joinroles",
+        "qualified_name": "welcomer joinroles",
+        "description": "Gets or adds (to) the list of join roles",
+        "hidden": false,
+        "aliases": [
+          "join-roles"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "roles",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The roles you want to add to the list of join roles",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "agreementstring",
+        "qualified_name": "welcomer agreementstring",
+        "description": "Gets or sets the string they have to type out in order to be verified",
+        "hidden": false,
+        "aliases": [
+          "agreement-string"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "agreementMessage",
+              "type": "System.String",
+              "description": "The string they have to type out to be verified",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "verifiedrole",
+        "qualified_name": "welcomer verifiedrole",
+        "description": "Gets or sets the verified role",
+        "hidden": false,
+        "aliases": [
+          "verified-role"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "role",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "description": "The role you want to assign after they get verified",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "verificationchannel",
+        "qualified_name": "welcomer verificationchannel",
+        "description": "Gets or sets the verification channel",
+        "hidden": false,
+        "aliases": [
+          "verification-channel"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to set",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "toggleverification",
+        "qualified_name": "welcomer toggleverification",
+        "description": "Toggles verification for the server",
+        "hidden": false,
+        "aliases": [
+          "toggle-verification"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "togglejoinmessage",
+        "qualified_name": "welcomer togglejoinmessage",
+        "description": "Toggle join messages for the server",
+        "hidden": false,
+        "aliases": [
+          "toggle-join-message"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "toggleleavemessage",
+        "qualified_name": "welcomer toggleleavemessage",
+        "description": "Toggle leave messages for the server",
+        "hidden": false,
+        "aliases": [
+          "toggle-leave-message"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "joinmessage",
+        "qualified_name": "welcomer joinmessage",
+        "description": "Gets or sets the join message",
+        "hidden": false,
+        "aliases": [
+          "join-message"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "message",
+              "type": "System.String",
+              "description": "The join message you want to set. placeholders avaliable: `{user}`, `{server}`",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "leavemessage",
+        "qualified_name": "welcomer leavemessage",
+        "description": "Gets or sets the leave message",
+        "hidden": false,
+        "aliases": [
+          "leave-message"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "message",
+              "type": "System.String",
+              "description": "The leave message you want to set. placeholders avaliable: `{user}`, `{server}`",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "joinchannel",
+        "qualified_name": "welcomer joinchannel",
+        "description": "Gets or sets the channel for announcing member joining",
+        "hidden": false,
+        "aliases": [
+          "join-channel"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel to send the join messages to",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "leavechannel",
+        "qualified_name": "welcomer leavechannel",
+        "description": "Gets or sets the channel for announcing member leaving",
+        "hidden": false,
+        "aliases": [
+          "leave-channel"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel to send the leave mesages to",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "commands",
+    "qualified_name": "commands",
+    "description": "The module to configure commands",
+    "hidden": false,
+    "aliases": [
+      "command",
+      "cmd"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "disable",
+        "qualified_name": "commands disable",
+        "description": "Disabled specified command if its currently enabled.",
+        "hidden": false,
+        "aliases": [
+          "d"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "command",
+              "type": "System.String",
+              "description": "The command you want to disable",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to disable the command in (If no channel is specified then it will default to the channel you are currently in)",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "enable",
+        "qualified_name": "commands enable",
+        "description": "Enables specified command if its currently disabled.",
+        "hidden": false,
+        "aliases": [
+          "e"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "command",
+              "type": "System.String",
+              "description": "The command you want to enable",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to enable the command in (If no channel is specified then it will default to the channel you are currently in)",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "list",
+        "qualified_name": "commands list",
+        "description": "Lists disabled commands from specified channel",
+        "hidden": false,
+        "aliases": [
+          "l"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "blacklist",
+    "qualified_name": "blacklist",
+    "description": "Module to edit blacklisted words",
+    "hidden": false,
+    "aliases": [
+      "bl"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "add",
+        "qualified_name": "blacklist add",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "words",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "remove",
+        "qualified_name": "blacklist remove",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "words",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "togglenamefilter",
+        "qualified_name": "blacklist togglenamefilter",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "channel",
+    "qualified_name": "channel",
+    "description": "A module based on editing channels",
+    "hidden": false,
+    "aliases": [
+      "chn"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage channels"
+      }
+    ],
+    "children": [
+      {
+        "name": "topic",
+        "qualified_name": "channel topic",
+        "description": "Edits the current channels topic",
+        "hidden": false,
+        "aliases": [
+          "edit-topic"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "1": [
+            {
+              "name": "newTopic",
+              "type": "System.String",
+              "description": "The new topic you want to set. If left empty will respond with the current channels topic",
+              "optional": true,
+              "catch_all": true
+            }
+          ],
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want to view/change the topic for",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "newTopic",
+              "type": "System.String",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "delete",
+        "qualified_name": "channel delete",
+        "description": "Asks if you want to delete a channel and if no channel is specified it will choose the one you're executing the command from",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "description": "The channel you want deleted.",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "hook",
+    "qualified_name": "hook",
+    "hidden": true,
+    "aliases": [
+      "hooks"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "create",
+        "qualified_name": "hook create",
+        "description": "Creates a server hook (try `-hooks example` to see a list of example hooks you can create",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "name",
+              "type": "System.String",
+              "description": "The name of the hook",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "data",
+              "type": "System.String",
+              "description": "The data of the hook",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "example",
+        "qualified_name": "hook example",
+        "description": "Sends a list of example hooks you can create",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "delete",
+        "qualified_name": "hook delete",
+        "description": "",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "role",
+    "qualified_name": "role",
+    "description": "A module based on editing roles",
+    "hidden": false,
+    "aliases": [
+      "roles"
+    ],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "copyrolesto",
+        "qualified_name": "role copyrolesto",
+        "description": "Allows you to give roles from a specified member to another",
+        "hidden": false,
+        "aliases": [
+          "copy-roles-to",
+          "copy-to",
+          "copyto"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "1": [
+            {
+              "name": "to",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            }
+          ],
+          "0": [
+            {
+              "name": "from",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "to",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "suggestion",
+    "qualified_name": "suggestion",
+    "hidden": false,
+    "aliases": [],
+    "checks": [],
+    "children": [
+      {
+        "name": "channel",
+        "qualified_name": "suggestion channel",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {
+      "0": [
+        {
+          "name": "suggestion",
+          "type": "System.String",
+          "optional": false,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "ticket",
+    "qualified_name": "ticket",
+    "description": "Commands for opening/Creating tickets for your guild",
+    "hidden": false,
+    "aliases": [
+      "tickets"
+    ],
+    "checks": [],
+    "children": [
+      {
+        "name": "setup",
+        "qualified_name": "ticket setup",
+        "description": "This is for testing only.",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "allowedRoles",
+              "type": "DSharpPlus.Entities.DiscordRole",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "open",
+        "qualified_name": "ticket open",
+        "description": "Opens a ticket",
+        "hidden": false,
+        "aliases": [
+          "o"
+        ],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "name",
+              "type": "System.String",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "build",
+        "qualified_name": "ticket build",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "placeholdername",
+        "qualified_name": "ticket placeholdername",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "ticketType",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "newPlaceholderName",
+              "type": "System.String",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "info",
+        "qualified_name": "ticket info",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "ticketName",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "delete",
+        "qualified_name": "ticket delete",
+        "description": "Deletes a custom ticket if it exists",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "ticketName",
+              "type": "System.String",
+              "description": "The name of the custom ticket. (Case is ignored)",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "list",
+        "qualified_name": "ticket list",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "createreactionmenus",
+        "qualified_name": "ticket createreactionmenus",
+        "description": "Creates the menus for all the avaliable tickets",
+        "hidden": false,
+        "aliases": [
+          "crm",
+          "create-reaction-menus"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "birthday",
+    "qualified_name": "birthday",
+    "hidden": true,
+    "aliases": [
+      "bday"
+    ],
+    "checks": [],
+    "children": [
+      {
+        "name": "register",
+        "qualified_name": "birthday register",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "date",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "toggle",
+        "qualified_name": "birthday toggle",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "announcemessage",
+        "qualified_name": "birthday announcemessage",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "message",
+              "type": "System.String",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "announcechannel",
+        "qualified_name": "birthday announcechannel",
+        "hidden": false,
+        "aliases": [
+          "announce-channel"
+        ],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "channel",
+              "type": "DSharpPlus.Entities.DiscordChannel",
+              "optional": true,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "starboard",
+    "qualified_name": "starboard",
+    "hidden": true,
+    "aliases": [],
+    "checks": [
+      {
+        "name": "Require Permissions",
+        "value": "Manage guild"
+      }
+    ],
+    "children": [
+      {
+        "name": "set",
+        "qualified_name": "starboard set",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "amount",
+              "type": "System.Int32",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "coinflip",
+    "qualified_name": "coinflip",
+    "hidden": false,
+    "aliases": [
+      "cf",
+      "flip"
+    ],
+    "checks": [],
+    "children": [
+      {
+        "name": "challenges",
+        "qualified_name": "coinflip challenges",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      },
+      {
+        "name": "accept",
+        "qualified_name": "coinflip accept",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            },
+            {
+              "name": "result",
+              "type": "System.String",
+              "optional": true,
+              "catch_all": true
+            }
+          ]
+        }
+      },
+      {
+        "name": "deny",
+        "qualified_name": "coinflip deny",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "member",
+              "type": "DSharpPlus.Entities.DiscordMember",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {
+      "1": [
+        {
+          "name": "amount",
+          "type": "System.Double",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "result",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ],
+      "0": [
+        {
+          "name": "member",
+          "type": "DSharpPlus.Entities.DiscordMember",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "amount",
+          "type": "System.Double",
+          "optional": false,
+          "catch_all": false
+        },
+        {
+          "name": "result",
+          "type": "System.String",
+          "optional": true,
+          "catch_all": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "job",
+    "qualified_name": "job",
+    "description": "Gives you a random task to complete",
+    "hidden": true,
+    "aliases": [],
+    "checks": [],
+    "children": [
+      {
+        "name": "create",
+        "qualified_name": "job create",
+        "hidden": false,
+        "aliases": [],
+        "checks": [
+          {
+            "name": "Require Permissions",
+            "value": "Manage guild"
+          }
+        ],
+        "children": [],
+        "arguments": {
+          "0": [
+            {
+              "name": "name",
+              "type": "System.String",
+              "optional": false,
+              "catch_all": false
+            }
+          ]
+        }
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "race",
+    "qualified_name": "race",
+    "hidden": true,
+    "aliases": [],
+    "checks": [],
+    "children": [
+      {
+        "name": "pick",
+        "qualified_name": "race pick",
+        "hidden": false,
+        "aliases": [],
+        "checks": [],
+        "children": [],
+        "arguments": {}
+      }
+    ],
+    "arguments": {}
+  },
+  {
+    "name": "rolldice",
+    "qualified_name": "rolldice",
+    "hidden": true,
+    "aliases": [
+      "rd"
+    ],
+    "checks": [],
+    "children": [],
+    "arguments": {}
+  }
+]
