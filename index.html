@@ -2,9 +2,9 @@
 layout: home
 ---
 
-<span>Tracks:</span>
+<span>Commands:</span>
 <ul>
-  {% for commannd in site.data.commands %}
-    <li>Title: {{ track.name }}</li>
+  {% for command in site.data.commands %}
+    <li>Name: {{ command.name }}</li>
   {% endfor %}    
 </ul>
