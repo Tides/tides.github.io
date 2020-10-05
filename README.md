@@ -1,1 +1,1 @@
-# tides.cc
+# https://tides.cc
