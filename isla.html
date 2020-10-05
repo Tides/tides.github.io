@@ -3,6 +3,10 @@ title: Isla Bot
 layout: default
 ---
 
-<div>
-    <h1>This Is the page for isla commands</h1>
-</div>
+
+<span>Commands:</span>
+<ul>
+  {% for command in site.data.commands %}
+    <li>Name: {{ command.name }}</li>
+  {% endfor %}    
+</ul>

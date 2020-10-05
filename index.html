@@ -3,9 +3,43 @@ title: Home
 layout: default
 ---
 
-<span>Commands:</span>
-<ul>
-  {% for command in site.data.commands %}
-    <li>Name: {{ command.name }}</li>
-  {% endfor %}    
-</ul>
+<div class="container-fluid">
+    <section class="pt-5">
+        <h1 class="text-center">
+            Hi I'm Tides aka Junior
+        </h1>
+
+        <p class="text-center">
+            This is my personal website and I plan on using this as a blog/ a place to show what projects I'm working on
+        </p>
+    </section>
+
+    <br />
+
+    <div class="row row-cols-3 row-cols-lg-5 g-3 justify-content-center">
+        <div class="col align-items-stretch">
+            <div class="card h-100 bg-dark-grey rounded">
+                <img src="/images/obsidian.png" class="card-img-top" alt="<br/>" height="356" width="246" />
+                <div class="card-body">
+                    <h5 class="card-title">Obsidian</h5>
+                    <p class="card-text">A C# implementation of the Minecraft server protocol. (NET Core)</p>
+                </div>
+                <!--<div class="card-footer">
+                    <small class="text-muted">:)</small>
+                </div>-->
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 bg-dark-grey rounded">
+                <img src="/images/isla.png" class="card-img-top" alt="..." height="356" width="246" />
+                <div class="card-body">
+                    <h5 class="card-title">Isla</h5>
+                    <p class="card-text">A Multi-purpose discord bot written in c# using .Net Core</p>
+                </div>
+                <!--<div class="card-footer">
+                    <small class="text-muted"></small>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
