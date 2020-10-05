@@ -3,10 +3,26 @@ title: Isla Bot
 layout: default
 ---
 
-
-<span>Commands:</span>
-<ul>
+<div class="accordion" id="commandList">
   {% for command in site.data.commands %}
-    <li>Name: {{ command.name }}</li>
-  {% endfor %}    
-</ul>
+  <div class="card">
+    <div class="card-header p-0" id="heading{{ command.name }}">
+      <h2 class="mb-0">
+        <button class="btn btn-light btn-block text-left p-3 rounded-0" type="button" data-toggle="collapse"
+          data-target="#collapse{{ command.name }}" aria-expanded="true" aria-controls="collapse{{ command.name }}">
+          {{ command.name }}
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse{{ command.name }}" class="collapse show" aria-labelledby="heading{{ command.name }}"
+      data-parent="#commandList">
+      <div class="card-body">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, minus aliquid culpa iste ex impedit eaque
+        aspernatur natus! Rerum, temporibus.
+      </div>
+    </div>
+  </div>
+  <li>Name: {{ command.name }}</li>
+  {% endfor %}
+</div>
